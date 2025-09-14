@@ -101,18 +101,17 @@ export default function About() {
             <div className="flex gap-[40px] h-full items-start sm:flex-col xm:flex-col">
               <div className="w-[50%] sm:w-full xm:w-full space-y-6">
                 <p className="text-gray-600 leading-relaxed transition-transform duration-300 hover:translate-x-1">
-                  We create tailored presentations to help you persuade your
-                  colleagues, clients, or investors — whether it's live or
-                  digital, delivered for one or a hundred people.
+                  We deliver tailored telecom solutions — network design, cloud
+                  telephony, enterprise connectivity, and managed services — for
+                  teams of any size, anywhere.
                 </p>
                 <p className="text-gray-600 leading-relaxed transition-transform duration-300 hover:translate-x-1">
-                  We believe the mix of{" "}
+                  We combine engineering and strategy
                   <span className="font-medium text-gray-900 relative">
-                    strategy and design
+
                     <span className="absolute -inset-x-1 -inset-y-0.5 bg-yellow-100/40 rounded-lg -z-10 transform scale-105"></span>
-                  </span>{" "}
-                  (with a bit of coffee) is what makes your message clear,
-                  convincing, and captivating.
+                  </span>
+                  to make your communications reliable, secure, and scalable.
                 </p>
               </div>
 

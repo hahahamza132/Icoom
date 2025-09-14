@@ -9,13 +9,13 @@ export const navbarItems = [
    },
    {
       id: 2,
-      title: "Our work",
+      title: "Solutions",
       href: "/presentation",
    },
    {
       id: 3,
       title: "About us",
-      href: "/ICOM TELECOM-team",
+      href: "/ochi-team",
    },
    {
       id: 4,
@@ -67,13 +67,13 @@ export const footernavbarItems = [
    },
    {
       id: 3,
-      title: "Our work",
+      title: "Solutions",
       href: "presentation",
    },
    {
       id: 4,
       title: "About us",
-      href: "ICOM TELECOM-team",
+      href: "ochi-team",
    },
    {
       id: 5,
@@ -427,41 +427,41 @@ export const serviceProcessItems = [
    {
       id: 1,
       phase: "01. Phase",
-      name: "Discovery",
+      name: "Network Assessment",
       src: phase1,
-      review: "We define your goals, get to know your audience, and understand the context. Through a process of exploration, investigation, and research, we seek the insights that inform our future decisions.",
+      review: "We assess current infrastructure, coverage, traffic, security posture, and regulatory requirements to define clear success metrics.",
       button: "read"
    },
    {
       id: 2,
       phase: "02. Phase",
-      name: "Storytelling",
+      name: "Architecture & Design",
       src: phase2,
-      review: "Based on the answers, previous drafts, and additional research, we will develop a foundation of the deck — the structure of the presentation. We build a tone of voice, flow, and narrative to engage our audience. Here we will win people's minds.",
+      review: "We design the target architecture — WAN/LAN, Wi‑Fi/5G, voice, security, and cloud integrations — optimized for scale and resilience.",
       button: "read"
    },
    {
       id: 3,
       phase: "03. Phase",
-      name: "Design",
+      name: "Deployment & Integration",
       src: phase3,
-      review: "We use design to guide our audience's attention and keep them engaged. It's not only what you want them to do, but also how you make them feel. We make sure the presentation wins people's hearts and leaves a perfect long-lasting impression.",
+      review: "We implement, test, and integrate with existing systems, minimizing downtime and ensuring seamless cutovers across sites.",
       button: "read"
    },
    {
       id: 4,
       phase: "04. Phase",
-      name: "Feedback",
+      name: "Monitoring & Optimization",
       src: phase4,
-      review: "We want to stay on the same page. Hence, each phase wraps up presenting the work to you to collect and implement your feedback if such appears.",
+      review: "We instrument performance, reliability, and security, then tune policies and QoS for continuous improvement.",
       button: "read"
    },
    {
       id: 5,
       phase: "05. Phase",
-      name: "Delivery",
+      name: "Support & SLA",
       src: phase5,
-      review: "We will carefully collect and prepare all the project files to ensure smooth future use.",
+      review: "We hand over documentation, train teams, and provide ongoing managed support with clear SLAs.",
       button: "read"
    },
 ];
