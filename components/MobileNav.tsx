@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { logo, mobileLogo } from "@/public";
@@ -14,11 +13,12 @@ export default function MobileNav() {
 		<>
 			<div className="w-full hidden justify-between items-center h-[8vh] padding-x sm:flex xm:flex md:flex">
 				<Link href={"/"}>
-					<Image
-						src={logo}
+					<img
+						src={logo.src}
 						alt="ochi logo"
 						width={70}
 						height={70}
+						loading="lazy"
 					/>
 				</Link>
 				<HiOutlineMenuAlt4
@@ -36,11 +36,12 @@ export default function MobileNav() {
 						className="fixed top-0 bottom-0 right-0 z-50 w-full min-h-screen flex justify-end items-end flex-col bg-secondry">
 						<div className="w-full flex justify-between items-center h-[8vh] border-b border-[#f1f1f155] padding-x">
 							<Link href={"/"}>
-								<Image
-									src={mobileLogo}
+								<img
+									src={mobileLogo.src}
 									alt="ochi logo"
 									width={70}
 									height={70}
+									loading="lazy"
 								/>
 							</Link>
 							<IoMdClose
