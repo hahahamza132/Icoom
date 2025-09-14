@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { logo } from "@/public";
 import { LinkHover, TextMask } from "@/animation";
 import { footerItems, footernavbarItems } from "@/constants";
@@ -100,12 +99,13 @@ export default function Footer() {
 				<div className="w-1/2 sm:w-full xm:w-full transform-gpu hover:-translate-y-1 transition-transform duration-300">
 					<Link href={"/"}>
 						<div className="relative">
-							<Image
-								src={logo}
+							<img
+								src={logo.src}
 								alt="IcomTelecom logo"
 								width={70}
 								height={70}
 								className="drop-shadow-lg filter brightness-125 transform-gpu hover:scale-110 transition-transform duration-500"
+								loading="lazy"
 							/>
 							{/* 3D shine effect on logo */}
 							<div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
