@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { aboutImg } from "@/public";
 import { LinkHover } from "@/animation";
 import { footerItems } from "@/constants";
@@ -9,6 +9,19 @@ import { Heading, RoundButton } from "@/components";
 export default function About() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const [particles, setParticles] = useState<React.CSSProperties[]>([]);
+
+  useEffect(() => {
+    const styles = Array.from({ length: 12 }, () => ({
+      width: `${Math.random() * 15 + 5}px`,
+      height: `${Math.random() * 15 + 5}px`,
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      animation: `floatParticle ${Math.random() * 15 + 10}s infinite ease-in-out`,
+      animationDelay: `${Math.random() * 5}s`,
+    }));
+    setParticles(styles);
+  }, []);
 
   // Example images (replace with your own imports or URLs)
   const images = [
@@ -28,18 +41,11 @@ export default function About() {
         <div className="absolute bottom-10% right-5% w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl"></div>
         
         {/* Floating particles */}
-        {[...Array(12)].map((_, i) => (
+        {particles.map((style, i) => (
           <div
             key={i}
             className="absolute rounded-full bg-blue-200/40"
-            style={{
-              width: Math.random() * 15 + 5 + 'px',
-              height: Math.random() * 15 + 5 + 'px',
-              top: Math.random() * 100 + '%',
-              left: Math.random() * 100 + '%',
-              animation: `floatParticle ${Math.random() * 15 + 10}s infinite ease-in-out`,
-              animationDelay: Math.random() * 5 + 's'
-            }}
+            style={style}
           ></div>
         ))}
       </div>
