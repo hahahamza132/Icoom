@@ -80,7 +80,7 @@ export default function Hero() {
 										whileHover={{ y: -5, transition: { duration: 0.2 } }}
 									>
 										<p className="paragraph font-NeueMontreal text-gray-900 underline decoration-blue-400 decoration-2">
-											Goal defines it all
+											Business needs first
 										</p>
 										<p className="paragraph font-NeueMontreal text-gray-700 leading-relaxed">
 											What do you want to achieve?
@@ -98,7 +98,7 @@ export default function Hero() {
 										transition={{ delay: 0.1 }}
 									>
 										<p className="paragraph font-NeueMontreal text-gray-900 underline decoration-purple-400 decoration-2">
-											Audience is the hero
+											Users and locations
 										</p>
 										<p className="paragraph font-NeueMontreal text-gray-700 leading-relaxed">
 											Who is it for? What do they want? Why
@@ -120,7 +120,7 @@ export default function Hero() {
 										transition={{ delay: 0.2 }}
 									>
 										<p className="paragraph font-NeueMontreal text-gray-900 underline decoration-amber-400 decoration-2">
-											Context makes a difference
+											Deployment context matters
 										</p>
 										<p className="paragraph font-NeueMontreal text-gray-700 leading-relaxed">
 											When do you present? Online or live? At a
