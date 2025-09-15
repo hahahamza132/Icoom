@@ -15,7 +15,7 @@ export const navbarItems = [
    {
       id: 3,
       title: "About us",
-      href: "/ICOM TELECOM-team",
+      href: "/icom-team",
    },
    {
       id: 4,
@@ -73,7 +73,7 @@ export const footernavbarItems = [
    {
       id: 4,
       title: "About us",
-      href: "ICOM TELECOM-team",
+      href: "icom-team",
    },
    {
       id: 5,
@@ -91,7 +91,7 @@ export const clientsItem = [
    {
       id: 1,
       website: "Karman Ventures",
-      href: "https://www.ICOM TELECOM.design",
+      href: "https://www.icomtelecom.com",
       title: "Services:",
       name: "William Barnes",
       src: client01,
@@ -99,12 +99,12 @@ export const clientsItem = [
       links: [
          {
             id: 1,
-            title: "investor deck",
+            title: "telecom solutions",
             href: "/services",
          },
          {
             id: 2,
-            title: "sales deck",
+            title: "network infrastructure",
             href: "/services",
          },
       ]
@@ -116,41 +116,41 @@ export const clientsItem = [
       title: "Services:",
       name: "Nina Walloch",
       src: client02,
-      review: "Ihor and his team tackled the projects with great professionalism and creativity. They understood our brand value and turned this into excellent slide designs. The process was seamless and very effective, so we decided to roll this out across all our presentation decks. Furthermore, their understanding, professionalism, and creativity have secured a continued partnership.",
+      review: "ICOM Telecom tackled our telecommunications infrastructure projects with great professionalism and technical expertise. They understood our connectivity needs and delivered excellent network solutions. The implementation was seamless and very effective, so we decided to expand our partnership across all our communication systems.",
       links: [
          {
             id: 1,
-            title: "agency",
+            title: "network design",
             href: "/services",
          },
          {
             id: 2,
-            title: "big news deck",
+            title: "fiber optics",
             href: "/services",
          },
          {
             id: 3,
-            title: "branded template",
+            title: "wireless solutions",
             href: "/services",
          },
          {
             id: 4,
-            title: "investor deck",
+            title: "cloud connectivity",
             href: "/services",
          },
          {
             id: 5,
-            title: "product presentation",
+            title: "VoIP systems",
             href: "/services",
          },
          {
             id: 6,
-            title: "sales deck",
+            title: "security solutions",
             href: "/services",
          },
          {
             id: 7,
-            title: "startup pitch",
+            title: "managed services",
             href: "/services",
          },
       ]
@@ -162,31 +162,31 @@ export const clientsItem = [
       title: "Services:",
       name: "Tormer levy",
       src: client03,
-      review: "ICOM TELECOM brought a certain level of professionalism into our presentations that we were lacking before. When I showed our management and HR teams the presentations ICOM TELECOM developed, they were amazed — the final product was exactly what we needed to create a better experience for new employees and our clients.",
+      review: "ICOM Telecom brought a certain level of professionalism into our telecommunications infrastructure that we were lacking before. When I showed our management and IT teams the network solutions ICOM Telecom developed, they were amazed — the final product was exactly what we needed to create a better communication experience for our employees and clients.",
       links: [
          {
             id: 1,
-            title: "compony presentation",
+            title: "enterprise solutions",
             href: "/services",
          },
          {
             id: 2,
-            title: "onboarding presentation",
+            title: "network setup",
             href: "/services",
          },
          {
             id: 3,
-            title: "policy deck and playbook",
+            title: "system integration",
             href: "/services",
          },
          {
             id: 4,
-            title: "redesign",
+            title: "infrastructure upgrade",
             href: "/services",
          },
          {
             id: 5,
-            title: "sales deck",
+            title: "technical support",
             href: "/services",
          },
       ]

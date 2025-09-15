@@ -3,8 +3,8 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <title>ICOM TELECOM </title>
       <Head />
+      <title>ICOM TELECOM - Global Telecommunications Solutions</title>
       <body>
         <Main />
         <NextScript />

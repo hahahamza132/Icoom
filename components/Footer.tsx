@@ -5,8 +5,8 @@ import { LinkHover, TextMask } from "@/animation";
 import { footerItems, footernavbarItems } from "@/constants";
 
 export default function Footer() {
-	const phrase = ["Eye-", "opening"];
-	const phrase1 = ["PRESENTATIONS"];
+	const phrase = ["Global", "Telecom"];
+	const phrase1 = ["SOLUTIONS"];
 	
 	return (
 		<footer className="w-full min-h-screen padding-x z-30 relative pt-[40px] bg-gradient-to-b from-blue-600 to-blue-800 flex flex-col justify-between rounded-t-[20px] mt-[-20px] transform-gpu perspective-1000">
@@ -45,22 +45,22 @@ export default function Footer() {
 								<div className="flex flex-col gap-y-[10px]">
 									<LinkHover
 										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-white/90 hover:text-white capitalize flex flex-col before:bottom-[1px] after:bottom-[1px] before:bg-white/50 after:bg-white"
-										title={`202-1965 W 4th Awe`}
+										title={`123 Telecom Plaza`}
 										href="/"
 									/>
 									<LinkHover
 										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-white/90 hover:text-white capitalize flex flex-col before:bottom-[1px] after:bottom-[1px] before:bg-white/50 after:bg-white"
-										title={`Vancouver, Canada`}
+										title={`New York, NY 10001`}
 										href="/"
 									/>
 									<LinkHover
 										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-white/90 hover:text-white capitalize flex flex-col before:bottom-[1px] after:bottom-[1px] before:bg-white/50 after:bg-white"
-										title="30 Chukarina"
+										title="456 Tech Center Dr"
 										href="/"
 									/>
 									<LinkHover
 										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-white/90 hover:text-white capitalize flex flex-col before:bottom-[1px] after:bottom-[1px] before:bg-white/50 after:bg-white"
-										title="St Lviv, Ukraine"
+										title="San Francisco, CA 94105"
 										href="/"
 									/>
 								</div>
@@ -84,7 +84,7 @@ export default function Footer() {
 								E:
 							</h1>
 							<LinkHover
-								title="hello@IcomTelecom"
+								title="hello@icomtelecom.com"
 								href="/"
 								className="before:h-[1px] after:h-[1px] paragraph font-medium text-white/90 hover:text-white before:bottom-[-3px] after:bottom-[-3px] before:bg-white/50 after:bg-white"
 							/>
@@ -102,7 +102,7 @@ export default function Footer() {
 						<div className="relative">
 							<Image
 								src={logo}
-								alt="IcomTelecom logo"
+								alt="ICOM Telecom logo"
 								width={70}
 								height={70}
 								className="drop-shadow-lg filter brightness-125 transform-gpu hover:scale-110 transition-transform duration-500"
@@ -115,7 +115,7 @@ export default function Footer() {
 				<div className="w-1/2 h-full flex gap-[10px] justify-between items-end sm:w-full xm:w-full sm:flex-col xm:flex-col sm:items-start xm:items-start">
 					<div className="flex sm:flex-col xm:flex-col gap-[10px]">
 						<h1 className="paragraph font-medium font-NeueMontreal text-white/60">
-							© IcomTelecom design 2024.
+							© ICOM Telecom 2024.
 						</h1>
 						<LinkHover
 							title="Legal Terms"
@@ -125,7 +125,7 @@ export default function Footer() {
 					</div>
 					<div>
 						<LinkHover
-							title="Website by Zain"
+							title="Website by ICOM Telecom"
 							href="/"
 							className="before:h-[1px] after:h-[1px] paragraph font-medium text-white/60 hover:text-white before:bottom-[-3px] after:bottom-[-3px] before:bg-white/30 after:bg-white/60"
 						/>

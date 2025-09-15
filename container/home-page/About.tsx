@@ -50,22 +50,22 @@ export default function About() {
           <h2 className="sub-heading font-medium font-NeueMontreal text-gray-900 leading-relaxed max-w-4xl relative z-10">
             ICOM TELECOM is a{" "}
             <span className="text-blue-600 font-semibold relative inline-block transform transition-transform duration-300 hover:scale-105 hover:-translate-y-0.5">
-              strategic partner
+              leading provider
               <span className="absolute -inset-1 bg-blue-100/40 rounded-lg -z-10 blur-sm"></span>
             </span>{" "}
-            for fast-growing tech businesses that need to&nbsp;
+            of telecommunications solutions for businesses that need to&nbsp;
             <span className="link-flash cursor-pointer text-blue-600 relative inline-block">
-              raise funds
+              enhance connectivity
               <span className="absolute inset-0 bg-blue-100/30 rounded-md -z-10 transform scale-110 opacity-0 transition-opacity duration-300 hover:opacity-100"></span>
             </span>
-            , sell products,{" "}
+            , optimize networks,{" "}
             <span className="link-flash cursor-pointer text-blue-600 relative inline-block">
-              explain complex ideas
+              implement solutions
               <span className="absolute inset-0 bg-blue-100/30 rounded-md -z-10 transform scale-110 opacity-0 transition-opacity duration-300 hover:opacity-100"></span>
             </span>
             , and{" "}
             <span className="link-flash cursor-pointer text-blue-600 relative inline-block">
-              hire great people
+              scale operations
               <span className="absolute inset-0 bg-blue-100/30 rounded-md -z-10 transform scale-110 opacity-0 transition-opacity duration-300 hover:opacity-100"></span>
             </span>
             .
@@ -95,18 +95,18 @@ export default function About() {
             <div className="flex gap-[40px] h-full items-start sm:flex-col xm:flex-col">
               <div className="w-[50%] sm:w-full xm:w-full space-y-6">
                 <p className="text-gray-600 leading-relaxed transition-transform duration-300 hover:translate-x-1">
-                  We create tailored presentations to help you persuade your
-                  colleagues, clients, or investors — whether it's live or
-                  digital, delivered for one or a hundred people.
+                  We create tailored telecommunications solutions to help you connect your
+                  teams, clients, and partners — whether it's local or
+                  global, serving one location or hundreds of sites.
                 </p>
                 <p className="text-gray-600 leading-relaxed transition-transform duration-300 hover:translate-x-1">
                   We believe the mix of{" "}
                   <span className="font-medium text-gray-900 relative">
-                    strategy and design
+                    technology and expertise
                     <span className="absolute -inset-x-1 -inset-y-0.5 bg-yellow-100/40 rounded-lg -z-10 transform scale-105"></span>
                   </span>{" "}
-                  (with a bit of coffee) is what makes your message clear,
-                  convincing, and captivating.
+                  (with reliable support) is what makes your communications clear,
+                  efficient, and scalable.
                 </p>
               </div>
 
@@ -145,7 +145,7 @@ export default function About() {
           <div className="w-fit relative">
             <div className="absolute -inset-2 bg-blue-200/40 rounded-full blur-lg opacity-0 transition-opacity duration-500 hover:opacity-100"></div>
             <RoundButton
-              href="/ochi-team"
+              href="/icom-team"
               title="Read More"
               bgcolor="#2563eb"
               className="bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg relative z-10"

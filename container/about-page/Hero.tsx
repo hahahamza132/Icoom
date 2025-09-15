@@ -50,25 +50,26 @@ export default function Hero() {
 								<div className="w-[50%] flex flex-col gap-y-[40px] sm:w-full xm:w-full">
 									<div className="flex flex-col gap-y-[20px]">
 										<p className="paragraph font-NeueMontreal text-secondry">
-											In Ukrainian, ochi - means eyes. It&apos;s not
-											<br /> just a beautiful word, but our philosophy.
+											ICOM Telecom stands for Integrated
+											<br /> Communications Technology. It&apos;s not
 											<br />
-											Almost everything that needs to be
-											<br /> communicated is better shown than <br />
-											explained.
+											just our name, but our mission.
+											<br /> Everything that needs to be
+											<br /> connected works better with <br />
+											our solutions.
 										</p>
 									</div>
 									<div className="flex flex-col gap-y-[20px]">
 										<p className="paragraph font-NeueMontreal text-secondry">
-											We believe a great presentation evokes
+											We believe great connectivity enables
 											<br />
-											interest and drives business results far
-											<br /> better than any saying can. Hence, we
+											innovation and drives business success far
+											<br /> better than isolated systems can. Hence, we
 											<br />
-											founded ochi to help you persuade
-											<br /> colleagues and clients by creating eye-
+											founded ICOM Telecom to help you connect
+											<br /> teams and clients through cutting-
 											<br />
-											opening presentations.
+											edge telecommunications.
 										</p>
 									</div>
 								</div>
@@ -99,8 +100,8 @@ export default function Hero() {
 			</div>
 			<div className="padding-x">
 				<h1 className="sub-heading font-medium font-NeueMontreal text-secondry">
-					We save businesses from ugly and
-					<br className="sm:hidden xm:hidden" /> ineffective presentations.
+					We save businesses from unreliable and
+					<br className="sm:hidden xm:hidden" /> inefficient communications.
 				</h1>
 			</div>
 		</section>

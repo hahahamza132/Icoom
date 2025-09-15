@@ -31,12 +31,12 @@ export default function Capibilyties() {
 					<span className="xl:link-flash lg:link-flash md:link-flash cursor-pointer text-blue-300 hover:text-white transition-colors duration-300">
 						Let's be honest.
 					</span>
-					&nbsp;There are really no excuses to have a bad presentation anymore.
-					No one has time for poorly communicated ideas. Focus on what you do
+					&nbsp;There are really no excuses to have poor connectivity anymore.
+					No one has time for unreliable communications. Focus on what you do
 					best <span className="sm:hidden xm:hidden">—</span>
 					growing your business, while we do our best at
 					<span className="xl:link-flash lg:link-flash md:link-flash cursor-pointer text-blue-300 hover:text-white transition-colors duration-300">
-						&nbsp;making your presentations awesome.
+						&nbsp;making your communications seamless.
 					</span>
 				</motion.h1>
 			</div>

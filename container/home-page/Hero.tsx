@@ -10,20 +10,30 @@ export default function Hero() {
 			data-scroll
 			data-scroll-speed="-.3"
 		>
-			{/* Background YouTube Video */}
-			<div className="absolute inset-0 -z-10">
-	<iframe
-		className="w-full h-full"
-		src="https://www.youtube.com/embed/_Sl8diqCAFw?autoplay=1&mute=1&loop=1&playlist=_Sl8diqCAFw&controls=0&showinfo=0&modestbranding=1"
-		title="YouTube video background"
-		allow="autoplay; fullscreen; encrypted-media"
-		allowFullScreen
-	></iframe>
-</div>
+			{/* Moving Earth Background */}
+			<div className="absolute inset-0 -z-10 overflow-hidden">
+				<div className="relative w-full h-full">
+					{/* Earth Image with Animation */}
+					<motion.div
+						className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+						style={{
+							backgroundImage: "url('https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"
+						}}
+						animate={{
+							scale: [1, 1.1, 1],
+							rotate: [0, 360],
+						}}
+						transition={{
+							duration: 60,
+							repeat: Infinity,
+							ease: "linear"
+						}}
+					/>
+					{/* Overlay for better text readability */}
+					<div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-800/60 to-blue-700/70" />
+				</div>
+			</div>
 
-
-			{/* Dark overlay for readability */}
-			<div className="absolute inset-0 bg-black/40 z-10" />
 
 			{/* Content */}
 			<div className="relative z-20 w-full h-full flex flex-col justify-between">
