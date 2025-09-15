@@ -56,16 +56,6 @@ export const scale = {
 };
 
 // CURVE
-let initialPath = "";
-let targetPath = "";
-
-if (typeof window !== "undefined") {
-    initialPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight
-        } Q-100 ${window.innerHeight / 2} 100 0`;
-    targetPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight
-        } Q100 ${window.innerHeight / 2} 100 0`;
-}
-
 export const text = {
     initial: {
         opacity: 1,
