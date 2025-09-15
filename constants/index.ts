@@ -427,41 +427,41 @@ export const serviceProcessItems = [
    {
       id: 1,
       phase: "01. Phase",
-      name: "Discovery",
+      name: "Network Assessment",
       src: phase1,
-      review: "We define your goals, get to know your audience, and understand the context. Through a process of exploration, investigation, and research, we seek the insights that inform our future decisions.",
+      review: "We conduct comprehensive network audits to understand your current infrastructure, identify bottlenecks, and assess your telecommunications needs. Our technical team evaluates your existing systems, bandwidth requirements, and future scalability needs to design the optimal solution.",
       button: "read"
    },
    {
       id: 2,
       phase: "02. Phase",
-      name: "Storytelling",
+      name: "Solution Design",
       src: phase2,
-      review: "Based on the answers, previous drafts, and additional research, we will develop a foundation of the deck — the structure of the presentation. We build a tone of voice, flow, and narrative to engage our audience. Here we will win people's minds.",
+      review: "Based on the assessment findings, we develop a customized telecommunications architecture. Our engineers create detailed network diagrams, select appropriate technologies, and design redundant systems that ensure reliability, security, and optimal performance for your specific business requirements.",
       button: "read"
    },
    {
       id: 3,
       phase: "03. Phase",
-      name: "Design",
+      name: "Implementation",
       src: phase3,
-      review: "We use design to guide our audience's attention and keep them engaged. It's not only what you want them to do, but also how you make them feel. We make sure the presentation wins people's hearts and leaves a perfect long-lasting impression.",
+      review: "Our certified technicians deploy your telecommunications infrastructure with minimal disruption to your operations. We follow industry best practices for installation, configuration, and testing. Each component is thoroughly validated to ensure seamless integration with your existing systems.",
       button: "read"
    },
    {
       id: 4,
       phase: "04. Phase",
-      name: "Feedback",
+      name: "Testing & Optimization",
       src: phase4,
-      review: "We want to stay on the same page. Hence, each phase wraps up presenting the work to you to collect and implement your feedback if such appears.",
+      review: "We conduct rigorous testing of all systems including performance benchmarks, security protocols, and failover procedures. Our team optimizes network configurations, fine-tunes performance parameters, and ensures all systems meet or exceed specified requirements before final handover.",
       button: "read"
    },
    {
       id: 5,
       phase: "05. Phase",
-      name: "Delivery",
+      name: "Support & Maintenance",
       src: phase5,
-      review: "We will carefully collect and prepare all the project files to ensure smooth future use.",
+      review: "We provide comprehensive documentation, user training, and ongoing support services. Our 24/7 monitoring ensures optimal performance, while our maintenance programs keep your systems updated and secure. We're your long-term telecommunications partner.",
       button: "read"
    },
 ];
@@ -691,47 +691,57 @@ export const serviceCapaybilitiesItem = [
    {
       id: 1,
       src1: capaybilities1,
-      title1: "RAISE FUNDS:",
-      review: "We help manage investor expectations and secure financing for your business with an excellent investor deck.Having a good product or illuminating ideas is not enough anymore.Poor investor presentation may close the door to potential financing right away.In contrast, a properly made investor deck provides investors with clarity, evokes confidence, and leaves them craving for more.",
-      subTitle: "Projects",
+      title1: "NETWORK INFRASTRUCTURE:",
+      review: "We design and implement robust network infrastructure that scales with your business growth. From fiber optic installations to wireless solutions, we ensure your connectivity foundation is built to last and perform under any demand.",
+      subTitle: "Solutions",
       links1: [
          {
             id: 1,
-            title: "investor deck",
+            title: "fiber optic networks",
             href: "/"
          },
          {
             id: 2,
-            title: "startup pitch",
-            href: "/"
-         },
-      ],
-      src2: capaybilities2,
-      title2: "SELL PRODUCTS:",
-      links2: [
-         {
-            id: 1,
-            title: "business proposal",
-            href: "/"
-         },
-         {
-            id: 2,
-            title: "company presentation",
+            title: "wireless infrastructure",
             href: "/"
          },
          {
             id: 3,
-            title: "product presentation",
+            title: "network security",
             href: "/"
          },
          {
             id: 4,
-            title: "sales deck",
+            title: "data center solutions",
+            href: "/"
+         },
+      ],
+      src2: capaybilities2,
+      title2: "COMMUNICATION SOLUTIONS:",
+      links2: [
+         {
+            id: 1,
+            title: "VoIP systems",
+            href: "/"
+         },
+         {
+            id: 2,
+            title: "unified communications",
+            href: "/"
+         },
+         {
+            id: 3,
+            title: "video conferencing",
+            href: "/"
+         },
+         {
+            id: 4,
+            title: "cloud telephony",
             href: "/"
          },
          {
             id: 5,
-            title: "service deck",
+            title: "mobile solutions",
             href: "/"
          },
       ]
@@ -739,62 +749,62 @@ export const serviceCapaybilitiesItem = [
    {
       id: 2,
       src1: capaybilities3,
-      title1: "HIRE & MANAGE PEOPLE:",
-      review: "We help manage investor expectations and secure financing for your business with an excellent investor deck.Having a good product or illuminating ideas is not enough anymore.Poor investor presentation may close the door to potential financing right away.In contrast, a properly made investor deck provides investors with clarity, evokes confidence, and leaves them craving for more.",
-      subTitle: "Projects",
+      title1: "MANAGED SERVICES:",
+      review: "Our comprehensive managed services ensure your telecommunications infrastructure operates at peak performance 24/7. We monitor, maintain, and optimize your systems so you can focus on your core business operations.",
+      subTitle: "Services",
       links1: [
          {
             id: 1,
-            title: "big news deck",
+            title: "24/7 monitoring",
             href: "/"
          },
          {
             id: 2,
-            title: "branded template",
+            title: "proactive maintenance",
             href: "/"
          },
          {
             id: 3,
-            title: "onboarding presentation",
+            title: "technical support",
             href: "/"
          },
          {
             id: 4,
-            title: "policy deck & playbook",
+            title: "system optimization",
             href: "/"
          },
          {
             id: 5,
-            title: "progress report",
+            title: "disaster recovery",
             href: "/"
          },
       ],
       src2: capaybilities4,
-      title2: "ADDITIONAL:",
+      title2: "DIGITAL TRANSFORMATION:",
       links2: [
          {
             id: 1,
-            title: "agency",
+            title: "cloud migration",
             href: "/"
          },
          {
             id: 2,
-            title: "branding",
+            title: "IoT integration",
             href: "/"
          },
          {
             id: 3,
-            title: "corporate training",
+            title: "5G deployment",
             href: "/"
          },
          {
             id: 4,
-            title: "redesign",
+            title: "network automation",
             href: "/"
          },
          {
             id: 5,
-            title: "review",
+            title: "analytics & reporting",
             href: "/"
          },
       ]
@@ -805,61 +815,61 @@ export const expectationsItems = [
    {
       id: 1,
       title1: "01",
-      subTitle1: "Comunication",
+      subTitle1: "Expert Consultation",
       btn: "read",
-      para1: "The relationship with the clients is our top priority. We put extra effort into keeping mutual respect, honesty, and clarity in the conversation. For each client, we develop a project view site in Notion to track milestones and see the thinking behind steps. You always know what and when we do, as you feel confident in the results we bring.",
+      para1: "Our telecommunications experts work closely with you to understand your unique business requirements. We conduct thorough network assessments and provide strategic recommendations that align with your growth objectives. Every solution is tailored to your specific industry needs and operational challenges.",
    },
    {
       id: 2,
       title1: "04",
-      subTitle1: "One point of contact",
+      subTitle1: "Dedicated Account Management",
       btn: "read",
-      para1: "Every project is led by Ihor, the agency's founder and creative director. He ensures the whole project flows from start to finish. He puts together the right creative team for your specific project. You will always have this direct contact person available to speak your business language. He takes care of translating your business goals into the language of design for the team."
+      para1: "Every client is assigned a dedicated account manager who serves as your single point of contact throughout the entire project lifecycle. Your account manager coordinates with our technical teams, ensures project milestones are met, and provides regular updates on implementation progress and system performance."
    },
    {
       id: 3,
       title1: "02",
-      subTitle1: "Ukrainian Business",
+      subTitle1: "Global Reach, Local Expertise",
       btn: "read",
-      para1: "We are a Ukrainian-born business working mainly with international clients. And as Ukrainians, we offer an unshakable workforce that's proven it can handle anything. The international arena was our focus from the start. And each working day, we showed up as genuine innovators and Ukraine ambassadors. Part of our mission is to promote our homeland by doing the most incredible work we can, each project at a time.",
+      para1: "With operations spanning multiple continents, ICOM Telecom combines global telecommunications expertise with deep local market knowledge. Our international team understands regional regulations, cultural nuances, and technical requirements, ensuring seamless deployment across diverse markets and time zones."
    },
    {
       id: 4,
       title1: "05",
-      subTitle1: "Constantly Improving",
+      subTitle1: "Innovation & Future-Ready",
       btn: "read",
-      para1: "We are passionate about creating industry-shifting presentations. And as the world around us, we constantly evolve and improve. Our growth is fueled by an innovative ecosystem designed for each team member to grow. We provide them with frequent pieces for training both on design craft and personal development. We are constantly looking for new ways to support our creatives and our community as for our clients."
+      para1: "We stay ahead of telecommunications trends and emerging technologies. Our R&D team continuously evaluates new solutions like 5G, IoT, AI-driven network management, and edge computing. We ensure your infrastructure is not just current but prepared for future technological advances and business growth."
    },
    {
       id: 5,
       title1: "03",
-      subTitle1: "Holistic Approach",
+      subTitle1: "End-to-End Solutions",
       btn: "read",
-      para1: "We simply ask lots of questions to understand your goals, business, and niche you operate. Our discovery process is essential as it informs our decisions throughout the project. Once we firmly define the goal, it is incredible to move towards that goal. That's why so much of our work is discovery, research, and asking good questions. The answers we get and the data we find go into the foundation of project success.",
+      para1: "From initial consultation to ongoing support, we provide comprehensive telecommunications solutions. Our holistic approach covers network design, implementation, integration, training, and maintenance. We ensure all components work seamlessly together, creating a unified communications ecosystem that enhances productivity and reduces operational complexity."
    },
    {
       id: 6,
       title1: "06",
-      subTitle1: "Limited Amount of Client",
+      subTitle1: "Enterprise-Grade Security",
       btn: "read",
-      para1: "We believe it is vital to dedicate sole focus and undivided attention to each project. To add as much value as possible, we serve a limited amount of clients per month. We have a rule that we follow to choosing projects: our client understands the value of the presentation as a communication tool. We believe in their products or ideas. Together, we work to create positive change."
+      para1: "Security is paramount in all our telecommunications solutions. We implement multi-layered security protocols, encryption standards, and compliance frameworks that meet industry regulations. Our security-first approach protects your data, communications, and network infrastructure from evolving cyber threats while maintaining optimal performance."
    },
 ];
 
 export const achiveItems = [
    {
       id: 1,
-      title1: ["100+"],
-      title2: ["$280+"],
-      subTitle1: "Clients from 17 Countries",
-      subTitle2: "Millions raised for our clients",
+      title1: ["500+"],
+      title2: ["99.9%"],
+      subTitle1: "Global Enterprise Clients",
+      subTitle2: "Network Uptime Guarantee",
    },
    {
       id: 2,
-      title1: ["90%"],
-      title2: ["98%"],
-      subTitle1: "Of our clients come back",
-      subTitle2: "Net Promoting Score",
+      title1: ["24/7"],
+      title2: ["50+"],
+      subTitle1: "Technical Support Coverage",
+      subTitle2: "Countries Served Worldwide",
    },
 ];
 
