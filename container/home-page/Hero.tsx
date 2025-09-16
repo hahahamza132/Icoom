@@ -18,7 +18,7 @@ export default function Hero() {
 			</div>
 			
 			{/* Animated Background Grid */}
-			<div className="absolute inset-0 bg-[linear-gradient(rgba(3,102,204,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(0,102,204,0.01)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+			<div className="absolute inset-0 bg-[linear-gradient(rgba(0,102,204,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(0,102,204,0.01)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
 			
 			{/* Floating Network Nodes */}
 			<div className="absolute inset-0 overflow-hidden">
