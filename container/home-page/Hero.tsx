@@ -97,7 +97,7 @@ export default function Hero() {
 					>
 						<Link
 							href="/contact"
-							className="group bg-telecomBlue hover:bg-telecomDark text-white px-10 py-5 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 shadow-telecom hover:shadow-telecom-lg transform hover:-translate-y-1 text-lg"
+							className="group bg-telecomBlue hover:bg-telecomDark text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 shadow-telecom hover:shadow-telecom-lg transform hover:-translate-y-1 text-lg"
 						>
 							Start Your Project
 							<ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
