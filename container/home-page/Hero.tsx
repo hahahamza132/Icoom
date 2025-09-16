@@ -6,6 +6,17 @@ import { ArrowUpRight, Signal, Wifi, Globe, Zap } from "lucide-react";
 export default function Hero() {
 	return (
 		<section className="relative w-full min-h-screen bg-primary overflow-hidden">
+			{/* Animated Earth Background */}
+			<div className="absolute inset-0 flex items-center justify-center opacity-20">
+				<div className="relative w-[800px] h-[800px] lg:w-[600px] lg:h-[600px] md:w-[500px] md:h-[500px] sm:w-[400px] sm:h-[400px]">
+					<img
+						src="https://gifdb.com/images/high/earth-spinning-to-left-n19e2i274qbb8afu.gif"
+						alt="Spinning Earth"
+						className="w-full h-full object-contain animate-pulse"
+					/>
+				</div>
+			</div>
+			
 			{/* Animated Background Grid */}
 			<div className="absolute inset-0 bg-[linear-gradient(rgba(0,102,204,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,102,204,0.03)_1px,transparent_1px)] bg-[size:60px_60px] animate-pulse"></div>
 			
