@@ -5,7 +5,7 @@ import { ArrowUpRight, Signal, Wifi, Globe, Zap } from "lucide-react";
 
 export default function Hero() {
 	return (
-		<section className="relative w-full min-h-[120vh] bg-primary overflow-hidden">
+		<section className="relative w-full min-h-[150vh] bg-primary overflow-hidden">
 			{/* Animated Earth Background */}
 			<div className="absolute inset-0 flex items-center justify-center opacity-80">
 				<div className="relative w-[1000px] h-[1000px] lg:w-[800px] lg:h-[800px] md:w-[600px] md:h-[600px] sm:w-[500px] sm:h-[500px]">
