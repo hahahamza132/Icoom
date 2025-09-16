@@ -119,11 +119,13 @@ export default function About() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-telecom-lg">
               <Image
-                src={aboutImg}
-                alt="ICOM Telecom Infrastructure"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDJFsCoPl97xPjEFXZRgyzpkel3NJIWx1gA&s"
+                alt="Business Team Collaboration"
+                width={600}
+                height={500}
                 className="w-full h-[500px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-telecomDark/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-telecomDark/30 to-transparent"></div>
             </div>
             
             {/* Floating Stats Card */}

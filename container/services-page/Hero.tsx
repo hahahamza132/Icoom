@@ -4,6 +4,15 @@ import { Signal, Wifi, Globe, Shield, Zap, Network } from "lucide-react";
 export default function Hero() {
 	return (
 		<section className="w-full min-h-screen bg-primary relative overflow-hidden">
+			{/* Telecom Infrastructure Background */}
+			<div className="absolute inset-0 opacity-10">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIDJFsCoPl97xPjEFXZRgyzpkel3NJIWx1gA&s"
+					alt="Telecom Infrastructure"
+					className="w-full h-full object-cover"
+				/>
+			</div>
+			
 			{/* Animated Background */}
 			<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,102,204,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_20%,rgba(0,204,255,0.1)_0%,transparent_50%)]"></div>
 			<div className="absolute inset-0 bg-[linear-gradient(rgba(0,102,204,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,102,204,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
