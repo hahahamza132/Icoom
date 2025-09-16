@@ -1,180 +1,159 @@
 import { motion } from "framer-motion";
+import { Signal, Wifi, Globe, Shield, Zap, Network } from "lucide-react";
 
 export default function Hero() {
 	return (
-		<section className="w-full min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 relative overflow-hidden">
-			{/* 3D Background Elements */}
-			<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-300/20 via-blue-200/10 to-transparent"></div>
-			<div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-blue-300/30 to-transparent"></div>
+		<section className="w-full min-h-screen bg-primary relative overflow-hidden">
+			{/* Animated Background */}
+			<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,102,204,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_20%,rgba(0,204,255,0.1)_0%,transparent_50%)]"></div>
+			<div className="absolute inset-0 bg-[linear-gradient(rgba(0,102,204,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,102,204,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 			
-			{/* Floating 3D Shapes */}
-			<div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
-			<div className="absolute bottom-0 left-20 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl"></div>
+			{/* Floating Elements */}
+			{[...Array(15)].map((_, i) => (
+				<motion.div
+					key={i}
+					className="absolute w-1 h-1 bg-telecomBlue/40 rounded-full"
+					style={{
+						left: `${Math.random() * 100}%`,
+						top: `${Math.random() * 100}%`,
+					}}
+					animate={{
+						scale: [1, 2, 1],
+						opacity: [0.2, 0.8, 0.2],
+					}}
+					transition={{
+						duration: 4 + Math.random() * 2,
+						repeat: Infinity,
+						delay: Math.random() * 3,
+					}}
+				/>
+			))}
 			
-			{/* 3D Grid Pattern */}
-			<div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30"></div>
-			
-			<div className="w-full flex flex-col justify-between relative z-10">
-				<div className="w-full flex flex-col">
-					<div className="w-full margin padding-x pt-16">
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.7 }}
-						>
-							<h1 className="heading tracking-[-1.3px] text-white font-semibold font-FoundersGrotesk uppercase drop-shadow-lg">
-								TELECOM SERVICES
-							</h1>
-						</motion.div>
-					</div>
-					
-					{/* Animated Border Divider */}
-					<motion.div 
-						className="w-full border-t border-blue-300/40 relative"
-						initial={{ width: 0 }}
-						animate={{ width: "100%" }}
-						transition={{ duration: 1.2, delay: 0.3 }}
+			<div className="w-full flex flex-col justify-center relative z-10 min-h-screen">
+				<div className="max-w-7xl mx-auto padding-x">
+					{/* Header */}
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8 }}
+						className="text-center mb-16"
 					>
-						<div className="absolute top-0 left-0 w-20 h-px bg-gradient-to-r from-transparent to-blue-400"></div>
-						<div className="absolute top-0 right-0 w-20 h-px bg-gradient-to-l from-transparent to-blue-400"></div>
-					</motion.div>
-					
-					<motion.div 
-						className="w-full"
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 0.8, delay: 0.5 }}
-					>
-						<p className="w-[80%] sm:w-full xm:w-full sub-heading font-normal padding-x font-NeueMontreal text-blue-100 padding-y leading-relaxed">
-							We deliver&nbsp;
-							<span className="relative group cursor-pointer">
-								<span className="text-white font-medium relative z-10">cutting-edge</span>
-								<span className="absolute inset-0 bg-gradient-to-r from-blue-400/30 to-cyan-400/30 rounded-lg transform group-hover:scale-105 transition-transform duration-300 -z-10"></span>
-							</span>
-							&nbsp;telecommunications solutions that connect businesses globally, enhance network infrastructure, and&nbsp;
-							<span className="relative group cursor-pointer">
-								<span className="text-white font-medium relative z-10">drive digital transformation</span>
-								<span className="absolute inset-0 bg-gradient-to-r from-cyan-400/30 to-blue-400/30 rounded-lg transform group-hover:scale-105 transition-transform duration-300 -z-10"></span>
-							</span>
-							&nbsp;across industries.
+						<div className="inline-flex items-center gap-2 bg-telecomLight border border-telecomBlue/20 rounded-full px-6 py-3 mb-8">
+							<Network className="w-5 h-5 text-telecomBlue" />
+							<span className="text-telecomDark font-semibold">Enterprise Telecommunications</span>
+						</div>
+						
+						<h1 className="text-7xl lg:text-6xl md:text-5xl sm:text-4xl xm:text-3xl font-bold text-telecomDark mb-6 leading-tight">
+							Next-Generation
+							<br />
+							<span className="text-telecomBlue">Telecom Solutions</span>
+						</h1>
+						
+						<p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+							We deliver cutting-edge telecommunications infrastructure, 5G networks, 
+							cloud communications, and digital transformation solutions that connect 
+							businesses globally and drive innovation across industries.
 						</p>
 					</motion.div>
-					
-					{/* Animated Border Divider */}
-					<motion.div 
-						className="w-full border-t border-blue-300/40 relative"
-						initial={{ width: 0 }}
-						animate={{ width: "100%" }}
-						transition={{ duration: 1.2, delay: 0.7 }}
+
+					{/* Services Grid */}
+					<motion.div
+						initial={{ opacity: 0, y: 40 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.3 }}
+						className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
 					>
-						<div className="absolute top-0 left-0 w-20 h-px bg-gradient-to-r from-transparent to-blue-400"></div>
-						<div className="absolute top-0 right-0 w-20 h-px bg-gradient-to-l from-transparent to-blue-400"></div>
-					</motion.div>
-					
-					<div className="w-full flex py-[20px] flex-col">
-						<motion.div 
-							className="w-full flex justify-between sm:flex-col xm:flex-col padding-x sm:gap-[20px] xm:gap-[20px]"
-							initial={{ opacity: 0, y: 30 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8, delay: 0.9 }}
-						>
-							<div className="w-[50%] sm:w-full xm:w-full">
-								<p className="paragraph font-NeueMontreal text-blue-200">
-									Our comprehensive approach <br /> to telecommunications:
+						{[
+							{
+								icon: Signal,
+								title: "5G Infrastructure",
+								desc: "Ultra-fast, low-latency networks for the future of connectivity",
+								color: "from-blue-500 to-blue-600"
+							},
+							{
+								icon: Shield,
+								title: "Network Security",
+								desc: "Enterprise-grade security protocols and threat protection",
+								color: "from-green-500 to-green-600"
+							},
+							{
+								icon: Globe,
+								title: "Global Connectivity",
+								desc: "Seamless international communications across 50+ countries",
+								color: "from-purple-500 to-purple-600"
+							},
+							{
+								icon: Wifi,
+								title: "Cloud Communications",
+								desc: "Scalable VoIP, video conferencing, and unified communications",
+								color: "from-cyan-500 to-cyan-600"
+							},
+							{
+								icon: Zap,
+								title: "Digital Transformation",
+								desc: "Modernize your communications with AI-driven solutions",
+								color: "from-orange-500 to-orange-600"
+							},
+							{
+								icon: Network,
+								title: "Managed Services",
+								desc: "24/7 monitoring, maintenance, and technical support",
+								color: "from-red-500 to-red-600"
+							}
+						].map((service, index) => (
+							<motion.div
+								key={index}
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6, delay: 0.1 * index }}
+								className="group bg-white rounded-3xl p-8 shadow-telecom hover:shadow-telecom-lg border border-gray-100 hover:border-telecomBlue/20 transition-all duration-300 cursor-pointer transform hover:-translate-y-2"
+							>
+								<div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+									<service.icon className="w-8 h-8 text-white" />
+								</div>
+								<h3 className="text-2xl font-bold text-telecomDark mb-4 group-hover:text-telecomBlue transition-colors">
+									{service.title}
+								</h3>
+								<p className="text-gray-600 leading-relaxed">
+									{service.desc}
 								</p>
-							</div>
-							<div className="w-[50%] sm:w-full xm:w-full flex justify-between sm:flex-col xm:flex-col gap-[20px]">
-								<div className="w-[50%] sm:w-full xm:w-full flex flex-col gap-[20px]">
-									<motion.div 
-										className="flex flex-col gap-[20px] p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-blue-300/30 shadow-lg hover:shadow-xl transition-shadow duration-300"
-										whileHover={{ y: -5, transition: { duration: 0.2 } }}
-									>
-										<p className="paragraph font-NeueMontreal text-white underline decoration-cyan-400 decoration-2">
-											Network Infrastructure
-										</p>
-										<p className="paragraph font-NeueMontreal text-blue-100 leading-relaxed">
-											What connectivity do you need?
-											<br className="sm:hidden xm:hidden" /> Understanding your
-											network requirements <br className="sm:hidden xm:hidden" />
-											allows us to design scalable solutions
-											<br className="sm:hidden xm:hidden" /> that grow with your
-											business and ensure <br className="sm:hidden xm:hidden" />
-											reliable performance.
-										</p>
-									</motion.div>
-									
-									<motion.div 
-										className="flex flex-col gap-[20px] p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-blue-300/30 shadow-lg hover:shadow-xl transition-shadow duration-300"
-										whileHover={{ y: -5, transition: { duration: 0.2 } }}
-										transition={{ delay: 0.1 }}
-									>
-										<p className="paragraph font-NeueMontreal text-white underline decoration-blue-400 decoration-2">
-											Global Connectivity
-										</p>
-										<p className="paragraph font-NeueMontreal text-blue-100 leading-relaxed">
-											Where do you operate? What markets
-											<br className="sm:hidden xm:hidden" /> do you serve? We need to
-											understand your
-											<br className="sm:hidden xm:hidden" /> global footprint to deliver
-											seamless <br className="sm:hidden xm:hidden" />
-											international communications that
-											<br className="sm:hidden xm:hidden" />
-											connect your teams worldwide.
-										</p>
-									</motion.div>
+							</motion.div>
+						))}
+					</motion.div>
+
+					{/* Stats Section */}
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.6 }}
+						className="bg-white rounded-3xl p-12 shadow-telecom-lg border border-gray-100"
+					>
+						<div className="text-center mb-12">
+							<h2 className="text-4xl font-bold text-telecomDark mb-4">
+								Trusted by Industry Leaders
+							</h2>
+							<p className="text-xl text-gray-600">
+								Our solutions power communications for enterprises worldwide
+							</p>
+						</div>
+						
+						<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+							{[
+								{ value: "500+", label: "Enterprise Clients", icon: Globe },
+								{ value: "99.9%", label: "Network Uptime", icon: Shield },
+								{ value: "50+", label: "Countries Served", icon: Network },
+								{ value: "24/7", label: "Expert Support", icon: Zap }
+							].map((stat, index) => (
+								<div key={index} className="text-center group">
+									<stat.icon className="w-12 h-12 text-telecomBlue mx-auto mb-4 group-hover:scale-110 transition-transform" />
+									<div className="text-4xl font-bold text-telecomDark mb-2">{stat.value}</div>
+									<div className="text-gray-600 font-medium">{stat.label}</div>
 								</div>
-								
-								<div className="w-[50%] sm:w-full xm:w-full">
-									<motion.div 
-										className="flex flex-col gap-[20px] p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-blue-300/30 shadow-lg hover:shadow-xl transition-shadow duration-300"
-										whileHover={{ y: -5, transition: { duration: 0.2 } }}
-										transition={{ delay: 0.2 }}
-									>
-										<p className="paragraph font-NeueMontreal text-white underline decoration-cyan-300 decoration-2">
-											Digital Transformation
-										</p>
-										<p className="paragraph font-NeueMontreal text-blue-100 leading-relaxed">
-											How do you communicate today? Cloud-based
-											<br className="sm:hidden xm:hidden" />
-											or on-premise? Remote teams or centralized?
-											<br className="sm:hidden xm:hidden" /> We analyze your current
-											setup to modernize
-											<br className="sm:hidden xm:hidden" /> your communications and
-											enable future
-											<br className="sm:hidden xm:hidden" /> growth opportunities.
-										</p>
-									</motion.div>
-								</div>
-							</div>
-						</motion.div>
-					</div>
+							))}
+						</div>
+					</motion.div>
 				</div>
 			</div>
-			
-			{/* Subtle 3D Floating Elements */}
-			<motion.div 
-				className="absolute top-1/3 left-1/4 w-4 h-4 bg-cyan-400/40 rounded-full"
-				animate={{
-					y: [0, -20, 0],
-				}}
-				transition={{
-					duration: 4,
-					repeat: Infinity,
-					ease: "easeInOut"
-				}}
-			/>
-			<motion.div 
-				className="absolute bottom-1/4 right-1/3 w-6 h-6 bg-blue-400/30 rounded-full"
-				animate={{
-					y: [0, -15, 0],
-				}}
-				transition={{
-					duration: 5,
-					repeat: Infinity,
-					ease: "easeInOut",
-					delay: 1
-				}}
-			/>
 		</section>
 	);
 }

@@ -12,10 +12,23 @@ const config: Config = {
     extend: {
       colors: {
         background: "#f1f1f1",
+        primary: "#f1f1f1",
+        telecomBlue: "#0066cc",
+        telecomDark: "#003366",
+        telecomLight: "#e6f2ff",
+        telecomAccent: "#00ccff",
         secondry: "#212121",
-        marquee: "#004d43",
-        about: "#cdea68"
+        marquee: "#0066cc",
+        about: "#f1f1f1"
       },
+      backgroundImage: {
+        'telecom-gradient': 'linear-gradient(135deg, #0066cc 0%, #003366 100%)',
+        'telecom-light': 'linear-gradient(135deg, #f1f1f1 0%, #e6f2ff 100%)',
+      },
+      boxShadow: {
+        'telecom': '0 10px 40px rgba(0, 102, 204, 0.1)',
+        'telecom-lg': '0 20px 60px rgba(0, 102, 204, 0.15)',
+      }
     },
     fontFamily: {
       FoundersGrotesk: ["FoundersGrotesk", "sans-serif"],

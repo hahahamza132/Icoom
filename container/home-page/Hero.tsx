@@ -1,102 +1,146 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Signal, Wifi, Globe, Zap } from "lucide-react";
 
 export default function Hero() {
 	return (
-		<section
-			className="relative w-full h-screen overflow-hidden"
-			data-scroll
-			data-scroll-speed="-.3"
-		>
-			{/* Moving Earth Background */}
-			<div className="absolute inset-0 -z-10 overflow-hidden">
-				<div className="relative w-full h-full">
-					{/* Earth Image with Animation */}
+		<section className="relative w-full min-h-screen bg-primary overflow-hidden">
+			{/* Animated Background Grid */}
+			<div className="absolute inset-0 bg-[linear-gradient(rgba(0,102,204,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,102,204,0.03)_1px,transparent_1px)] bg-[size:60px_60px] animate-pulse"></div>
+			
+			{/* Floating Network Nodes */}
+			<div className="absolute inset-0 overflow-hidden">
+				{[...Array(12)].map((_, i) => (
 					<motion.div
-						className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+						key={i}
+						className="absolute w-2 h-2 bg-telecomBlue/30 rounded-full"
 						style={{
-							backgroundImage: "url('https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"
+							left: `${Math.random() * 100}%`,
+							top: `${Math.random() * 100}%`,
 						}}
 						animate={{
-							scale: [1, 1.1, 1],
-							rotate: [0, 360],
+							scale: [1, 1.5, 1],
+							opacity: [0.3, 0.8, 0.3],
 						}}
 						transition={{
-							duration: 60,
+							duration: 3 + Math.random() * 2,
 							repeat: Infinity,
-							ease: "linear"
+							delay: Math.random() * 2,
 						}}
 					/>
-					{/* Overlay for better text readability */}
-					<div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-800/60 to-blue-700/70" />
-				</div>
+				))}
 			</div>
 
-
-			{/* Content */}
-			<div className="relative z-20 w-full h-full flex flex-col justify-between">
-				<div className="flex flex-col justify-center items-center text-center h-[75vh] px-6">
-					<motion.h1
-						initial={{ opacity: 0, y: 40 }}
+			{/* Main Content */}
+			<div className="relative z-10 w-full h-full flex flex-col justify-center padding-x">
+				<div className="max-w-7xl mx-auto">
+					{/* Hero Badge */}
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 1 }}
-						className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight"
+						transition={{ duration: 0.6 }}
+						className="inline-flex items-center gap-2 bg-telecomLight border border-telecomBlue/20 rounded-full px-6 py-3 mb-8"
 					>
-						Empowering Connectivity with <br />
-						<span className="text-blue-400">ICOM Telecom</span>
+						<Signal className="w-4 h-4 text-telecomBlue" />
+						<span className="text-telecomDark font-medium text-sm">Next-Gen Telecommunications</span>
+					</motion.div>
+
+					{/* Main Heading */}
+					<motion.h1
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.2 }}
+						className="text-7xl lg:text-6xl md:text-5xl sm:text-4xl xm:text-3xl font-bold text-telecomDark leading-tight mb-6"
+					>
+						Connecting Your
+						<br />
+						<span className="text-telecomBlue relative">
+							Digital Future
+							<motion.div
+								className="absolute -bottom-2 left-0 w-full h-1 bg-telecomAccent rounded-full"
+								initial={{ scaleX: 0 }}
+								animate={{ scaleX: 1 }}
+								transition={{ duration: 1, delay: 1 }}
+							/>
+						</span>
 					</motion.h1>
 
+					{/* Subtitle */}
 					<motion.p
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 1, delay: 0.5 }}
-						className="mt-6 max-w-2xl text-lg text-gray-200"
+						transition={{ duration: 0.8, delay: 0.4 }}
+						className="text-xl text-gray-600 max-w-2xl mb-12 leading-relaxed"
 					>
-						Delivering innovative telecom solutions for businesses and individuals.
-						From global connectivity to next-gen communication — we’ve got you
-						covered.
+						ICOM Telecom delivers cutting-edge telecommunications infrastructure, 
+						5G networks, and digital transformation solutions for enterprises worldwide.
 					</motion.p>
 
 					{/* CTA Buttons */}
 					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 1, delay: 1 }}
-						className="mt-8 flex gap-4"
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.6 }}
+						className="flex flex-wrap gap-4 mb-16"
 					>
 						<Link
 							href="/contact"
-							className="flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-medium shadow-md hover:bg-blue-700 transition"
+							className="group bg-telecomBlue hover:bg-telecomDark text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 shadow-telecom hover:shadow-telecom-lg transform hover:-translate-y-1"
 						>
-							Start a Project <ArrowUpRight size={20} />
+							Start Your Project
+							<ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
 						</Link>
 						<Link
 							href="/services"
-							className="px-6 py-3 rounded-full border border-white text-white font-medium hover:bg-white/10 transition"
+							className="border-2 border-telecomBlue text-telecomBlue hover:bg-telecomBlue hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
 						>
-							Explore Services
+							Explore Solutions
 						</Link>
 					</motion.div>
-				</div>
 
-				{/* Scroll Down */}
-				<div className="relative w-full flex items-center justify-center pb-8">
-					<motion.p
-						initial={{ opacity: 0, y: -10 }}
+					{/* Stats */}
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{
-							repeat: Infinity,
-							repeatType: "reverse",
-							duration: 1.5,
-						}}
-						className="text-gray-200 text-sm"
+						transition={{ duration: 0.8, delay: 0.8 }}
+						className="grid grid-cols-4 sm:grid-cols-2 gap-8 max-w-2xl"
 					>
-						↓ Scroll Down
-					</motion.p>
+						{[
+							{ icon: Globe, value: "50+", label: "Countries" },
+							{ icon: Signal, value: "99.9%", label: "Uptime" },
+							{ icon: Zap, value: "500+", label: "Enterprises" },
+							{ icon: Wifi, value: "24/7", label: "Support" },
+						].map((stat, index) => (
+							<div key={index} className="text-center">
+								<stat.icon className="w-8 h-8 text-telecomBlue mx-auto mb-2" />
+								<div className="text-2xl font-bold text-telecomDark">{stat.value}</div>
+								<div className="text-sm text-gray-600">{stat.label}</div>
+							</div>
+						))}
+					</motion.div>
 				</div>
 			</div>
+
+			{/* Scroll Indicator */}
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 1.5 }}
+				className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+			>
+				<motion.div
+					animate={{ y: [0, 10, 0] }}
+					transition={{ duration: 2, repeat: Infinity }}
+					className="w-6 h-10 border-2 border-telecomBlue rounded-full flex justify-center"
+				>
+					<motion.div
+						animate={{ y: [0, 12, 0] }}
+						transition={{ duration: 2, repeat: Infinity }}
+						className="w-1 h-3 bg-telecomBlue rounded-full mt-2"
+					/>
+				</motion.div>
+			</motion.div>
 		</section>
 	);
 }

@@ -5,211 +5,174 @@ import { aboutImg } from "@/public";
 import { LinkHover } from "@/animation";
 import { footerItems } from "@/constants";
 import { Heading, RoundButton } from "@/components";
+import { Shield, Zap, Globe, Users, Award, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function About() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
-  // Example images (replace with your own imports or URLs)
-  const images = [
-    aboutImg,
-    "/about.png",
-    "/about.png",
+  const features = [
+    { icon: Shield, title: "Enterprise Security", desc: "Military-grade encryption and security protocols" },
+    { icon: Zap, title: "Lightning Fast", desc: "Ultra-low latency 5G and fiber networks" },
+    { icon: Globe, title: "Global Reach", desc: "Presence in 50+ countries worldwide" },
+    { icon: Users, title: "Expert Team", desc: "Certified telecommunications engineers" },
+    { icon: Award, title: "Industry Leader", desc: "Award-winning solutions and service" },
+    { icon: TrendingUp, title: "Future Ready", desc: "Next-gen technology and innovation" },
   ];
 
   return (
     <section 
       ref={sectionRef}
-      className="w-full bg-gradient-to-b from-white to-gray-50 padding-y rounded-t-[20px] z-20 relative mt-[-15px] overflow-hidden"
+      className="w-full bg-primary padding-y relative overflow-hidden"
     >
-      {/* 3D Background Elements */}
-      <div className="absolute inset-0 overflow-hidden -z-10">
-        <div className="absolute top-10% left-5% w-80 h-80 bg-blue-100/40 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10% right-5% w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl"></div>
-        
-        {/* Floating particles */}
-        {[...Array(12)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-blue-200/40"
-            style={{
-              width: Math.random() * 15 + 5 + 'px',
-              height: Math.random() * 15 + 5 + 'px',
-              top: Math.random() * 100 + '%',
-              left: Math.random() * 100 + '%',
-              animation: `floatParticle ${Math.random() * 15 + 10}s infinite ease-in-out`,
-              animationDelay: Math.random() * 5 + 's'
-            }}
-          ></div>
-        ))}
-      </div>
-
-      {/* Intro with 3D text effect */}
-      <div className="pl-[50px] sm:px-[20px] xm:px-[20px] relative">
-        <div className="relative inline-block">
-          <h2 className="sub-heading font-medium font-NeueMontreal text-gray-900 leading-relaxed max-w-4xl relative z-10">
-            ICOM TELECOM is a{" "}
-            <span className="text-blue-600 font-semibold relative inline-block transform transition-transform duration-300 hover:scale-105 hover:-translate-y-0.5">
-              leading provider
-              <span className="absolute -inset-1 bg-blue-100/40 rounded-lg -z-10 blur-sm"></span>
-            </span>{" "}
-            of telecommunications solutions for businesses that need to&nbsp;
-            <span className="link-flash cursor-pointer text-blue-600 relative inline-block">
-              enhance connectivity
-              <span className="absolute inset-0 bg-blue-100/30 rounded-md -z-10 transform scale-110 opacity-0 transition-opacity duration-300 hover:opacity-100"></span>
-            </span>
-            , optimize networks,{" "}
-            <span className="link-flash cursor-pointer text-blue-600 relative inline-block">
-              implement solutions
-              <span className="absolute inset-0 bg-blue-100/30 rounded-md -z-10 transform scale-110 opacity-0 transition-opacity duration-300 hover:opacity-100"></span>
-            </span>
-            , and{" "}
-            <span className="link-flash cursor-pointer text-blue-600 relative inline-block">
-              scale operations
-              <span className="absolute inset-0 bg-blue-100/30 rounded-md -z-10 transform scale-110 opacity-0 transition-opacity duration-300 hover:opacity-100"></span>
-            </span>
-            .
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,102,204,0.05)_0%,transparent_50%)]"></div>
+      
+      <div className="max-w-7xl mx-auto padding-x">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl md:text-4xl sm:text-3xl font-bold text-telecomDark mb-6">
+            Powering the Future of
+            <span className="text-telecomBlue"> Communications</span>
           </h2>
-          {/* Subtle 3D shadow effect */}
-          <div className="absolute -inset-2 bg-gradient-to-r from-blue-100/20 to-transparent -z-20 blur-lg rounded-lg"></div>
-        </div>
-      </div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            ICOM Telecom is a leading provider of telecommunications solutions, 
+            connecting businesses globally with cutting-edge infrastructure and 
+            innovative digital transformation services.
+          </p>
+        </motion.div>
 
-      {/* Divider Section with 3D border effect */}
-      <div className="w-full border-y border-gray-200 my-[60px] py-[30px] relative">
-        {/* 3D Border Highlights */}
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-300/50 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-300/30 to-transparent"></div>
-        
-        <div className="padding-x w-full flex sm:flex-col xm:flex-col gap-[40px] justify-between">
-          {/* Left side */}
-          <div className="w-[40%] sm:w-full xm:w-full">
-            <h3 className="text-lg font-semibold text-gray-800 relative inline-block">
-              What you can expect?
-              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-blue-400/50 rounded-full"></span>
-            </h3>
-          </div>
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <div>
+              <h3 className="text-3xl font-bold text-telecomDark mb-4">
+                Why Choose ICOM Telecom?
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                We create tailored telecommunications solutions that connect your teams, 
+                clients, and partners across the globe. Our expertise spans from local 
+                implementations to international enterprise deployments.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                The combination of <span className="font-semibold text-telecomBlue">advanced technology</span> and 
+                <span className="font-semibold text-telecomBlue"> expert support</span> ensures your 
+                communications are reliable, scalable, and future-ready.
+              </p>
+            </div>
 
-          {/* Right side */}
-          <div className="w-[60%] sm:w-full xm:w-full">
-            <div className="flex gap-[40px] h-full items-start sm:flex-col xm:flex-col">
-              <div className="w-[50%] sm:w-full xm:w-full space-y-6">
-                <p className="text-gray-600 leading-relaxed transition-transform duration-300 hover:translate-x-1">
-                  We create tailored telecommunications solutions to help you connect your
-                  teams, clients, and partners — whether it's local or
-                  global, serving one location or hundreds of sites.
-                </p>
-                <p className="text-gray-600 leading-relaxed transition-transform duration-300 hover:translate-x-1">
-                  We believe the mix of{" "}
-                  <span className="font-medium text-gray-900 relative">
-                    technology and expertise
-                    <span className="absolute -inset-x-1 -inset-y-0.5 bg-yellow-100/40 rounded-lg -z-10 transform scale-105"></span>
-                  </span>{" "}
-                  (with reliable support) is what makes your communications clear,
-                  efficient, and scalable.
-                </p>
-              </div>
-
-              {/* Links */}
-              <div className="w-[50%] sm:w-full xm:w-full">
-                <h1 className="text-gray-800 font-semibold mb-4 relative inline-block">
-                  Services:
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-400/30 rounded-full"></span>
-                </h1>
-                <div className="flex flex-col gap-2">
-                  {footerItems.map((item) => (
-                    <div 
-                      key={item.id} 
-                      className="relative overflow-hidden rounded-lg transition-transform duration-300 hover:-translate-y-0.5"
-                    >
-                      <LinkHover
-                        className="text-gray-700 hover:text-blue-600 transition-colors pl-2 relative z-10"
-                        title={item.title}
-                        href="/"
-                      />
-                      <div className="absolute inset-0 bg-blue-50/30 -z-10 rounded-lg transform origin-bottom scale-y-0 transition-transform duration-300 group-hover:scale-y-100"></div>
-                    </div>
-                  ))}
-                </div>
+            {/* Services List */}
+            <div>
+              <h4 className="text-xl font-semibold text-telecomDark mb-4">Core Services:</h4>
+              <div className="space-y-2">
+                {[
+                  "5G Network Infrastructure",
+                  "Enterprise VoIP Solutions", 
+                  "Cloud Communications",
+                  "Network Security & Monitoring"
+                ].map((service, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-center gap-3 text-gray-700 hover:text-telecomBlue transition-colors cursor-pointer"
+                  >
+                    <div className="w-2 h-2 bg-telecomBlue rounded-full"></div>
+                    {service}
+                  </motion.div>
+                ))}
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Approach + Images */}
-      <div className="w-full flex flex-col lg:flex-row justify-between padding-x gap-[40px]">
-        {/* Text + Button */}
-        <div className="flex flex-col gap-[30px] max-w-md">
-          <Heading title="Our approach" />
-          <div className="w-fit relative">
-            <div className="absolute -inset-2 bg-blue-200/40 rounded-full blur-lg opacity-0 transition-opacity duration-500 hover:opacity-100"></div>
             <RoundButton
               href="/icom-team"
-              title="Read More"
-              bgcolor="#2563eb"
-              className="bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg relative z-10"
+              title="Learn More About Us"
+              bgcolor="#0066cc"
+              className="bg-white text-telecomBlue shadow-telecom hover:shadow-telecom-lg"
               style={{ color: "#fff" }}
             />
-          </div>
+          </motion.div>
+
+          {/* Right Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-telecom-lg">
+              <Image
+                src={aboutImg}
+                alt="ICOM Telecom Infrastructure"
+                className="w-full h-[500px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-telecomDark/20 to-transparent"></div>
+            </div>
+            
+            {/* Floating Stats Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="absolute -bottom-8 -left-8 bg-white rounded-2xl p-6 shadow-telecom-lg border border-telecomLight"
+            >
+              <div className="text-3xl font-bold text-telecomBlue mb-1">99.9%</div>
+              <div className="text-sm text-gray-600">Network Uptime</div>
+              <div className="text-xs text-gray-500 mt-1">Industry Leading</div>
+            </motion.div>
+          </motion.div>
         </div>
 
-        {/* Images grid with enhanced 3D effects */}
-        <div className="w-full lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 perspective-1000">
-          {images.map((img, index) => (
-            <div
+        {/* Features Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {features.map((feature, index) => (
+            <motion.div
               key={index}
-              className={`relative rounded-[15px] overflow-hidden transition-all duration-700 ease-[.215,.61,.355,1] cursor-pointer transform-style-3d ${
-                hoveredIndex === index 
-                  ? "scale-[0.97] rotate-x-5 rotate-y-5 shadow-xl" 
-                  : "shadow-md"
-              }`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              style={{ 
-                transform: hoveredIndex === index 
-                  ? 'perspective(1000px) rotateX(5deg) rotateY(5deg) scale(0.97) translateZ(20px)' 
-                  : 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1) translateZ(0)'
-              }}
+              className={`bg-white rounded-2xl p-6 border transition-all duration-300 cursor-pointer ${
+                hoveredIndex === index 
+                  ? 'border-telecomBlue shadow-telecom-lg transform -translate-y-2' 
+                  : 'border-gray-200 shadow-telecom'
+              }`}
             >
-              <div className="relative w-full h-[250px] overflow-hidden">
-                <Image
-                  src={img}
-                  alt={`about-img-${index}`}
-                  fill
-                  className={`object-cover transition-all duration-[1.2s] ease-[.215,.61,.355,1] ${
-                    hoveredIndex === index ? "scale-[1.1] rotate-1" : ""
-                  }`}
-                />
-                {/* Overlay with gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                
-                {/* Shine effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              </div>
-              
-              {/* 3D frame effect */}
-              <div className="absolute inset-0 rounded-[15px] border border-white/20 pointer-events-none"></div>
-              <div className="absolute -inset-1 rounded-[15px] border border-white/10 pointer-events-none"></div>
-            </div>
+              <feature.icon className={`w-12 h-12 mb-4 transition-colors ${
+                hoveredIndex === index ? 'text-telecomBlue' : 'text-gray-400'
+              }`} />
+              <h3 className="text-xl font-semibold text-telecomDark mb-2">{feature.title}</h3>
+              <p className="text-gray-600">{feature.desc}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-
-      {/* CSS for animations */}
-      <style jsx>{`
-        @keyframes floatParticle {
-          0%, 100% { transform: translateY(0) rotate(0deg); }
-          33% { transform: translateY(-15px) rotate(5deg); }
-          66% { transform: translateY(10px) rotate(-5deg); }
-        }
-        .perspective-1000 {
-          perspective: 1000px;
-        }
-        .transform-style-3d {
-          transform-style: preserve-3d;
-        }
-      `}</style>
     </section>
   );
 }
