@@ -12,13 +12,13 @@ export default function Hero() {
 					<img
 						src="https://gifdb.com/images/high/earth-spinning-to-left-n19e2i274qbb8afu.gif"
 						alt="Spinning Earth"
-						className="w-full h-full object-contain animate-pulse"
+						className="w-full h-full object-contain"
 					/>
 				</div>
 			</div>
 			
 			{/* Animated Background Grid */}
-			<div className="absolute inset-0 bg-[linear-gradient(rgba(0,102,204,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,102,204,0.03)_1px,transparent_1px)] bg-[size:60px_60px] animate-pulse"></div>
+			<div className="absolute inset-0 bg-[linear-gradient(rgba(0,102,204,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(0,102,204,0.01)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
 			
 			{/* Floating Network Nodes */}
 			<div className="absolute inset-0 overflow-hidden">
