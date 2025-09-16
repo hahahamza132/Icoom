@@ -6,9 +6,7 @@ import { serviceCapaybilitiesItem } from "@/constants";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Capibilyties() {
-	const [hovered, setHovered] = useState(false);
-	const [hovered1, setHovered1] = useState(false);
-	const [activeImage, setActiveImage] = useState(null);
+	const [activePreviewImage, setActivePreviewImage] = useState<{src: string, alt: string} | null>(null);
 	
 	return (
 		<div className="w-full bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 padding-y rounded-t-[20px] shadow-2xl relative overflow-hidden">
@@ -76,7 +74,7 @@ export default function Capibilyties() {
 							{/* 3D Image Preview Panel */}
 							<div className="w-[40%] flex justify-end mr-[150px] sm:hidden xm:hidden sticky top-20 h-[300px]">
 								<AnimatePresence mode="wait">
-									{(hovered && item.id === 1) && (
+									{activePreviewImage && (
 										<motion.div
 											initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
 											animate={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -86,8 +84,8 @@ export default function Capibilyties() {
 											style={{ transformStyle: 'preserve-3d' }}
 										>
 											<Image
-												src={item.src1}
-												alt="Network Infrastructure"
+												src={activePreviewImage.src}
+												alt={activePreviewImage.alt}
 												width={300}
 												height={200}
 												className="w-full h-full object-cover"
@@ -95,26 +93,7 @@ export default function Capibilyties() {
 											<div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
 										</motion.div>
 									)}
-									{(hovered1 && item.id === 1) && (
-										<motion.div
-											initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
-											animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-											exit={{ opacity: 0, scale: 0.8, rotateY: -15 }}
-											transition={{ duration: 0.4 }}
-											className="w-[300px] h-[200px] rounded-2xl overflow-hidden shadow-2xl border-2 border-blue-400/30 bg-blue-900/20 backdrop-blur-sm"
-											style={{ transformStyle: 'preserve-3d' }}
-										>
-											<Image
-												src={item.src2}
-												alt="Communication Solutions"
-												width={300}
-												height={200}
-												className="w-full h-full object-cover"
-											/>
-											<div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
-										</motion.div>
-									)}
-									{!hovered && !hovered1 && item.id === 1 && (
+									{!activePreviewImage && (
 										<motion.div
 											initial={{ opacity: 0 }}
 											animate={{ opacity: 1 }}
@@ -145,10 +124,9 @@ export default function Capibilyties() {
 								<div
 									className="flex flex-col gap-y-[5px]"
 									onMouseEnter={() => {
-										setHovered(item.id === 1 && true);
-										setHovered1(false);
+										setActivePreviewImage({src: item.src1, alt: item.title1});
 									}}
-									onMouseLeave={() => setHovered(false)}
+									onMouseLeave={() => setActivePreviewImage(null)}
 								>
 									{item.links1.map((link) => (
 										<motion.div
@@ -185,10 +163,9 @@ export default function Capibilyties() {
 								<div
 									className="flex flex-col gap-y-[5px]"
 									onMouseEnter={() => {
-										setHovered1(item.id === 1 && true);
-										setHovered(false);
+										setActivePreviewImage({src: item.src2, alt: item.title2});
 									}}
-									onMouseLeave={() => setHovered1(false)}
+									onMouseLeave={() => setActivePreviewImage(null)}
 								>
 									{item.links2.map((link) => (
 										<motion.div
