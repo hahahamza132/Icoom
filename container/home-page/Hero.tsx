@@ -5,10 +5,10 @@ import { ArrowUpRight, Signal, Wifi, Globe, Zap } from "lucide-react";
 
 export default function Hero() {
 	return (
-		<section className="relative w-full min-h-screen bg-primary overflow-hidden">
+		<section className="relative w-full min-h-[120vh] bg-primary overflow-hidden">
 			{/* Animated Earth Background */}
 			<div className="absolute inset-0 flex items-center justify-center opacity-80">
-				<div className="relative w-[800px] h-[800px] lg:w-[600px] lg:h-[600px] md:w-[500px] md:h-[500px] sm:w-[400px] sm:h-[400px]">
+				<div className="relative w-[1000px] h-[1000px] lg:w-[800px] lg:h-[800px] md:w-[600px] md:h-[600px] sm:w-[500px] sm:h-[500px]">
 					<img
 						src="https://gifdb.com/images/high/earth-spinning-to-left-n19e2i274qbb8afu.gif"
 						alt="Spinning Earth"
@@ -44,14 +44,14 @@ export default function Hero() {
 			</div>
 
 			{/* Main Content */}
-			<div className="relative z-10 w-full h-full flex flex-col justify-center padding-x">
+			<div className="relative z-10 w-full h-full flex flex-col justify-center padding-x py-20">
 				<div className="max-w-7xl mx-auto">
 					{/* Hero Badge */}
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
-						className="inline-flex items-center gap-2 bg-telecomLight border border-telecomBlue/20 rounded-full px-6 py-3 mb-8"
+						className="inline-flex items-center gap-2 bg-telecomLight border border-telecomBlue/20 rounded-full px-6 py-3 mb-12"
 					>
 						<Signal className="w-4 h-4 text-telecomBlue" />
 						<span className="text-telecomDark font-medium text-sm">Next-Gen Telecommunications</span>
@@ -62,7 +62,7 @@ export default function Hero() {
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
-						className="text-7xl lg:text-6xl md:text-5xl sm:text-4xl xm:text-3xl font-bold text-telecomDark leading-tight mb-6"
+						className="text-8xl lg:text-7xl md:text-6xl sm:text-5xl xm:text-4xl font-bold text-telecomDark leading-tight mb-8"
 					>
 						Connecting Your
 						<br />
@@ -82,7 +82,7 @@ export default function Hero() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.4 }}
-						className="text-xl text-gray-600 max-w-2xl mb-12 leading-relaxed"
+						className="text-2xl text-gray-600 max-w-3xl mb-16 leading-relaxed"
 					>
 						ICOM Telecom delivers cutting-edge telecommunications infrastructure, 
 						5G networks, and digital transformation solutions for enterprises worldwide.
@@ -93,18 +93,18 @@ export default function Hero() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.6 }}
-						className="flex flex-wrap gap-4 mb-16"
+						className="flex flex-wrap gap-6 mb-20"
 					>
 						<Link
 							href="/contact"
-							className="group bg-telecomBlue hover:bg-telecomDark text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 shadow-telecom hover:shadow-telecom-lg transform hover:-translate-y-1"
+							className="group bg-telecomBlue hover:bg-telecomDark text-white px-10 py-5 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 shadow-telecom hover:shadow-telecom-lg transform hover:-translate-y-1 text-lg"
 						>
 							Start Your Project
 							<ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
 						</Link>
 						<Link
 							href="/services"
-							className="border-2 border-telecomBlue text-telecomBlue hover:bg-telecomBlue hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
+							className="border-2 border-telecomBlue text-telecomBlue hover:bg-telecomBlue hover:text-white px-10 py-5 rounded-full font-semibold transition-all duration-300 text-lg"
 						>
 							Explore Solutions
 						</Link>
@@ -115,7 +115,7 @@ export default function Hero() {
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.8 }}
-						className="grid grid-cols-4 sm:grid-cols-2 gap-8 max-w-2xl"
+						className="grid grid-cols-4 sm:grid-cols-2 gap-12 max-w-4xl"
 					>
 						{[
 							{ icon: Globe, value: "50+", label: "Countries" },
@@ -124,9 +124,9 @@ export default function Hero() {
 							{ icon: Wifi, value: "24/7", label: "Support" },
 						].map((stat, index) => (
 							<div key={index} className="text-center">
-								<stat.icon className="w-8 h-8 text-telecomBlue mx-auto mb-2" />
-								<div className="text-2xl font-bold text-telecomDark">{stat.value}</div>
-								<div className="text-sm text-gray-600">{stat.label}</div>
+								<stat.icon className="w-10 h-10 text-telecomBlue mx-auto mb-3" />
+								<div className="text-3xl font-bold text-telecomDark">{stat.value}</div>
+								<div className="text-base text-gray-600">{stat.label}</div>
 							</div>
 						))}
 					</motion.div>
@@ -138,7 +138,7 @@ export default function Hero() {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ delay: 1.5 }}
-				className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+				className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
 			>
 				<motion.div
 					animate={{ y: [0, 10, 0] }}
